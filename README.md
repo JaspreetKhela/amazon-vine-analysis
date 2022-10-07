@@ -2,7 +2,10 @@
 
 ## Overview of the Analysis
 ### Purpose
-The purpose of this analysis was to analyze Amazon reviews written by members of the paid Amazon Vine program. The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. Companies like SellBy pay a small fee to Amazon and provide products to Amazon Vine members, who are then required to publish a review. A video games dataset was imported onto AWS and PySpark was used to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. Next, Pandas was used to determine if there was any bias towards favorable reviews from Vine members in the chosen dataset.
+The purpose of this analysis was to analyze Amazon reviews written by members of the paid Amazon Vine program. The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. Companies like SellBy pay a small fee to Amazon and provide products to Amazon Vine members, who are then required to publish a review. 
+
+### ETL Process
+A video games dataset was imported into AWS and PySpark was used to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. Next, Pandas was used to determine if there was any bias towards favorable reviews from Vine members in the chosen product reviews dataset.
 
 ## Results
 ### pgAdmin Database Screenshots
@@ -12,6 +15,7 @@ _____
 <img width="1440" alt="2_pgadmin" src="https://user-images.githubusercontent.com/80941606/194560556-e9a617d3-eb51-4a98-92c0-ab55e77cd5bb.png">
 <img width="1440" alt="3_pgadmin" src="https://user-images.githubusercontent.com/80941606/194560575-8a4ba46d-b7cf-4a9b-a6a3-9f9885f0f071.png">
 <img width="1440" alt="4_pgadmin" src="https://user-images.githubusercontent.com/80941606/194560592-f4cdd49c-88d6-42c9-b210-6f6ff20adb7c.png">
+<img width="1440" alt="5_pgadmin" src="https://user-images.githubusercontent.com/80941606/194564471-8553f3df-6b9b-4214-a49a-4c4708cffb81.png">
 
 **Figure 1**: This image shows that the AWS database can be accessed using pgAdmin.
 _____
@@ -27,7 +31,7 @@ The vine_review_analysis.ipynb file performed an analysis on the video games rev
 
 ## Summary
 ### Bias
-In summary, since roughly 51.06% of Vine video game reviews were five stars, which is much higher than 38.70% of non-Vine video game reviews that were five stars, we can conclude that the Vine reviewers have a positive review bias. However, since there were significantly fewer Vine reviewers than non-Vine reviewers, we cannot definitively conclude that Vine reviewers in general write more positive product reviews than non-Vine reviewers do; consequently, more Vine review data is needed to arrive at a definitive conclusion.
+In summary, since roughly 51.06% of Vine video games reviews were five stars, which is much higher than 38.70% of non-Vine video games reviews that were five stars, we can conclude that the Vine reviewers had a positive product review bias. However, since there were significantly fewer Vine reviewers than non-Vine reviewers, we cannot definitively conclude that Vine reviewers in general write more positive product reviews than non-Vine reviewers do; consequently, more Vine product review data is needed to arrive at a definitive conclusion.
 
 ### Additional Analysis
-For additional analysis, we can perform the same analysis using other datasets and then compare the percentages of positive product reviews written by Vine reviewers against those of positive product reviews written by non-Vine reviewers. Moreover, we can also adjust the DataFrame filter arguments used in the vine_review_analysis.ipynb file.
+For additional analysis, we can perform the same analysis using other datasets and then compare the percentages of positive product reviews written by Vine reviewers against those of positive product reviews written by non-Vine reviewers. Moreover, we can also adjust the DataFrame filter arguments used in the vine_review_analysis.ipynb file to include a broader set of records in a chosen product reviews dataset.

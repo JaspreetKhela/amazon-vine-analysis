@@ -17,7 +17,7 @@ _____
 <img width="1440" alt="4_pgadmin" src="https://user-images.githubusercontent.com/80941606/194560592-f4cdd49c-88d6-42c9-b210-6f6ff20adb7c.png">
 <img width="1440" alt="5_pgadmin" src="https://user-images.githubusercontent.com/80941606/194564471-8553f3df-6b9b-4214-a49a-4c4708cffb81.png">
 
-**Figure 1**: This image shows that the AWS database can be accessed using pgAdmin.
+**Figure 1**: These images shows that the AWS database can be accessed and used to populated the local PostgreSQL database using pgAdmin.
 _____
 
 ### Analysis
